@@ -1,0 +1,24 @@
+{
+  "name": "riotjs-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "riot --type babel app dist",
+    "watch": "riot -w --type babel app dist",
+    "browsersync": "browser-sync start --server --files 'dist/*.js, app/*.html' --startPath app",
+    "serve": "parallelshell 'npm run watch' 'npm run browsersync'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "babel-preset-es2015-riot": "^1.1.0",
+    "riot": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers-2": "^6.3.13",
+    "browser-sync": "^2.14.0",
+    "parallelshell": "^2.0.0"
+  }
+}
